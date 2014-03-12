@@ -1,0 +1,2 @@
+serviceClass: k12.epr.client.Service
+path: 45E298C4B788965072C46EE80C2F9BD1.gwt.rpc
