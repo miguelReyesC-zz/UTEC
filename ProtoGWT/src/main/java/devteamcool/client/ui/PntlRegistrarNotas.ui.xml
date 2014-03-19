@@ -1,0 +1,33 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+  <g:HTMLPanel styleName="page_margin">
+    <div>
+      <div>REGISTRAR NOTAS</div>
+      <table cellpadding="5">
+        <tr>
+          <td>Profesor:</td>
+          <td>Luis Peña Mendoza</td>
+          <td>Programa:</td>
+          <td><g:ListBox ui:field="ddPrograma"></g:ListBox></td>
+          <td>Área:</td>
+          <td><g:ListBox ui:field="ddArea"></g:ListBox></td>
+          <td>Producto:</td>
+          <td><g:ListBox ui:field="ddProducto"></g:ListBox></td>
+        </tr>
+        <tr>
+          <td>Curso:</td>
+          <td><g:ListBox ui:field="ddCurso"></g:ListBox></td>
+          <td>Sección:</td>
+          <td><g:ListBox ui:field="ddSeccion"></g:ListBox></td>
+          <td>Tipo de Sesión:</td>
+          <td><g:ListBox ui:field="ddTipoSesion"></g:ListBox></td>
+          <td>Período:</td>
+          <td>2013-II</td>
+        </tr>
+      </table>
+    </div>
+  </g:HTMLPanel>
+
+</ui:UiBinder>

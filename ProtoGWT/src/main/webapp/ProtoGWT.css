@@ -4,6 +4,13 @@ body {
   padding: 10px;
 }
 
+.page_margin {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 1000px;
+}
+
 /* stock list header row */
 .watchListHeader {
   background-color: #2062B8;

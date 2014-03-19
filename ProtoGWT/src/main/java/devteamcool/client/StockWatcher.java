@@ -22,11 +22,13 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
+import devteamcool.client.ui.PntlRegistrarNotas;
 import devteamcool.shared.model.StockPrice;
 
 public class StockWatcher implements EntryPoint {
-
+  public static final String MAIN_CONTAINER = "mainContainer"; 
   private static final int REFRESH_INTERVAL = 5000;
+
   private VerticalPanel mainPanel = new VerticalPanel();
   private FlexTable stocksFlexTable = new FlexTable();
   private HorizontalPanel addPanel = new HorizontalPanel();
@@ -54,7 +56,7 @@ public class StockWatcher implements EntryPoint {
     stocksFlexTable.getCellFormatter().addStyleName(0, 2, "watchListNumericColumn");
     stocksFlexTable.getCellFormatter().addStyleName(0, 3, "watchListRemoveColumn");
 
-    stocksFlexTable.setCellPadding(6);
+    stocksFlexTable.setCellPadding(5);
 
     // Assemble Add Stock panel.
     addPanel.add(newSymbolTextBox);
@@ -67,7 +69,7 @@ public class StockWatcher implements EntryPoint {
     mainPanel.add(lastUpdatedLabel);
 
     // Associate the Main panel with the HTML host page.
-    RootPanel.get("stockList").add(mainPanel);
+    //RootPanel.get(MAIN_CONTAINER).add(mainPanel);
 
     // Move cursor focus to the input box.
     newSymbolTextBox.setFocus(true);
@@ -97,6 +99,7 @@ public class StockWatcher implements EntryPoint {
       }
     });
 
+    RootPanel.get(MAIN_CONTAINER).add(new PntlRegistrarNotas());
   }
 
   /**
